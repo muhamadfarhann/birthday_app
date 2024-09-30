@@ -327,30 +327,30 @@ class _PlayerWidgetState extends State<PlayerWidget> {
             ),
           ],
         ),
-        // Slider(
-        //   onChanged: (value) {
-        //     final duration = _duration;
-        //     if (duration == null) {
-        //       return;
-        //     }
-        //     final position = value * duration.inMilliseconds;
-        //     player.seek(Duration(milliseconds: position.round()));
-        //   },
-        //   value: (_position != null &&
-        //           _duration != null &&
-        //           _position!.inMilliseconds > 0 &&
-        //           _position!.inMilliseconds < _duration!.inMilliseconds)
-        //       ? _position!.inMilliseconds / _duration!.inMilliseconds
-        //       : 0.0,
-        // ),
-        // Text(
-        //   _position != null
-        //       ? '$_positionText / $_durationText'
-        //       : _duration != null
-        //           ? _durationText
-        //           : '',
-        //   style: const TextStyle(fontSize: 16.0),
-        // ),
+        Slider(
+          onChanged: (value) {
+            final duration = _duration;
+            if (duration == null) {
+              return;
+            }
+            final position = value * duration.inMilliseconds;
+            player.seek(Duration(milliseconds: position.round()));
+          },
+          value: (_position != null &&
+                  _duration != null &&
+                  _position!.inMilliseconds > 0 &&
+                  _position!.inMilliseconds < _duration!.inMilliseconds)
+              ? _position!.inMilliseconds / _duration!.inMilliseconds
+              : 0.0,
+        ),
+        Text(
+          _position != null
+              ? '$_positionText / $_durationText'
+              : _duration != null
+                  ? _durationText
+                  : '',
+          style: const TextStyle(fontSize: 16.0),
+        ),
       ],
     );
   }
