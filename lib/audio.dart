@@ -278,7 +278,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
                 backgroundColor: Colors.white,
               ),
               child: Text(
-                isPlaying ? 'Stop' : 'Rayakan Ulang Tahun',
+                isPlaying ? 'Stop' : 'Celebreate Your Birthday',
                 style: const TextStyle(
                   color: Colors.blue,
                 ),
