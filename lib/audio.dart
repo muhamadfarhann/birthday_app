@@ -296,7 +296,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
             ConfettiWidget(
               confettiController: controller,
               shouldLoop: true,
-              blastDirectionality: BlastDirectionality.explosive,
+              blastDirectionality: BlastDirectionality.directional,
               numberOfParticles: 70,
             ),
             Row(
