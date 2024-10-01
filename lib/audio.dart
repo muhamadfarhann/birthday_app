@@ -162,7 +162,7 @@ class _PlayerWidgetState extends State<PlayerWidget> {
           children: [
             Center(
               child: Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(10),
                 width: double.infinity,
                 child: Align(
                   alignment: Alignment.centerLeft,
